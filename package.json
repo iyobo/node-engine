@@ -1,0 +1,50 @@
+{
+  "name": "uncircled",
+  "version": "1.1.8",
+  "description": "A library with tools/decorators for preventing circular reference issues when serializing/deserializing classe objects that particularly implement the root-store pattern E,g Great for implementing a mobx root-store hydrated over SSR.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "circular references",
+    "typescript",
+    "mobx",
+    "ssr",
+    "root-store",
+    "serializer",
+    "deserializer",
+    "class"
+  ],
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/iyobo/uncircled"
+  },
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch",
+    "build": "tsc",
+    "prepublish": "tsc && npm test",
+    "dev": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "Iyobo Eki",
+  "license": "MIT",
+  "dependencies": {
+    "canvas-txt": "^2.0.7",
+    "class-transformer": "^0.2.3",
+    "lodash": "^4.17.14",
+    "reflect-metadata": "^0.1.13"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.136",
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
